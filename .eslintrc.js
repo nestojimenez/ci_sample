@@ -27,7 +27,6 @@ module.exports = {
         "error",
           2
         ],
-      "no-extra-semi": ["warn"],
       "linebreak-style": [
         "error",
         "windows"
