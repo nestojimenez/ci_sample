@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize]
 
 jobs:
   deploy:
@@ -35,7 +38,7 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: ${{secrets.HEROKU_APP}}
           heroku_email: ${{secrets.HEROKU_API_EMAIL}}
-          healthcheck: "htpps://${{secrets.HEROKU_APP}}/health"
+          healthcheck: "https://ci-sample-02047f099227.herokuapp.com/health"
           rollbackonhealthcheckfailed: true
 
 
