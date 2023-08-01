@@ -2,7 +2,7 @@ sudo: false
 
 language: node_js
 
-node js:
+node_js:
     - node
 install: 
     - npm ci
